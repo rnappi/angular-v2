@@ -1,0 +1,46 @@
+1 - Instalar o NodeJs para podermos utilizar o npm
+2 - instalar o type script (npm install -g typescript)
+3 - instalar o AngularCLI (npm install -g @angular/cli)
+
+Criando um projeto Angular (utilizando o AngularCLI)
+- Abrir o cmd no diretório desejado
+- Criar o novo projeto (ng new <nome-projeto>)
+- entrar no diretório do projeto e criar o servidor para podemos utilizar o localhost (ng serve)
+
+Criando um componente (manualmente)
+- criar um diretorio para o componente <nome-compoennte>
+- criar o arquivo <nome-componente.component.ts> que deverá ter a classe pública do componente <NomeComponenteComponent>
+- utilizar o decorator (a maneira que temos para passar informações adicionais para o compilador). Neste caso, vamos mostrar para o compilador que esta classe é um componente do Angular2, basta utilizar o decorator @Component({}) passando os meta-dados necessários.
+- devemos importar a classe Component do '@angular/core' (import{Component} from '@angular/core')
+
+    Meta-dados do component
+    - selector: nome da tag HTML que iremos criar para o componente
+    - template: o HTML que será renderizado na página
+
+    Incluindo o componente no módulo do Angular
+    - importar o componente no arquivo resposnsavel pelo módulo (import {NovoComponente} from 'caminho relativo do arquivo ts')
+    - declarations: a classe responsavel pelo componente <NomeCompoenteComponent>
+
+OBS: o decorator só pode ser utilizado com typescript, ainda não foi implementado no ECMA script
+
+Typescript
+- todo arquivo .js é um .ts válido
+- compilar o ts (tsc file.ts)
+- possui um transpile para transformar os comandos do ES2015 em javascript puro
+- tem suporte aos decorators
+- variaveis tipadas, gerando errors de compilação e ajudando o desenvolvedor
+
+Módulos (NGMODULE)
+- Ajuda a organizar e modularizar a aplicação. Podemos ter diferentes componentes dentro do módulo, além de controlar quais recursos serão expostos para os outros módulos da aplicação
+    
+    Meta-dados do módulo
+    - declarations: listamos todas as diretivas, componentes e pipes que iremos utilizar no módulo
+    - imports: listamos outros módulos que serão utilizados dentro do módulo que estamos Criando
+    - providers: listamos os serviços utilizados pelos componentes do módulo (scope global da aplicação)
+    - bootstrap: é o componente que representa o container do projeto, e será instanciado ao inciarmos a aplicação. Esta informação existe apenas no modulo raiz da aplicação
+    - exports: listamos quais declarações do módulo serão expostas para outros módulos
+
+    Criar módulo com AngularCLI
+    - ng g(generate) m(module) <nome-mmodulo>
+    - os módulos de funcionalidades (feature modules) não importam o BrowserModule, e sim o CommonModule. Esta é a grande diferença entre os dois tipos de modulos
+    

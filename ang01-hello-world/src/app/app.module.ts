@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NovoComponenteComponent } from './novo-componente/novo-componente.component';
+import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { NovoComponenteComponent } from './novo-componente/novo-componente.compo
     NovoComponenteComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CursosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
