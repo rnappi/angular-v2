@@ -44,3 +44,6 @@ Módulos (NGMODULE)
     - ng g(generate) m(module) <nome-mmodulo>
     - os módulos de funcionalidades (feature modules) não importam o BrowserModule, e sim o CommonModule. Esta é a grande diferença entre os dois tipos de modulos
     
+Templates
+- É o html que representa a view dos nossos componentes
+- Além das tags personalizadas, também podemos utilizar as tags padrão do HTML
