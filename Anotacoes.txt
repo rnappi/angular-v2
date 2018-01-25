@@ -2,6 +2,13 @@
 2 - instalar o type script (npm install -g typescript)
 3 - instalar o AngularCLI (npm install -g @angular/cli)
 
+Dicas de Plugins para o Atom e VSCode
+- AngularCLI que é a ferramenta oficial utilizada para criar projetos, componentes, services e etc
+- Angular 2, 4 and (upcoming...) TypeScript, HTML Snippets for VS Code
+- Atom OneDark Theme
+- HTML Snippets
+- vscode-icons
+
 Criando um projeto Angular (utilizando o AngularCLI)
 - Abrir o cmd no diretório desejado
 - Criar o novo projeto (ng new <nome-projeto>)
