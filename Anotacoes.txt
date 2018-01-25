@@ -12,6 +12,7 @@ Criando um componente (manualmente)
 - criar o arquivo <nome-componente.component.ts> que deverá ter a classe pública do componente <NomeComponenteComponent>
 - utilizar o decorator (a maneira que temos para passar informações adicionais para o compilador). Neste caso, vamos mostrar para o compilador que esta classe é um componente do Angular2, basta utilizar o decorator @Component({}) passando os meta-dados necessários.
 - devemos importar a classe Component do '@angular/core' (import{Component} from '@angular/core')
+- no componente, o código deve ser responsável apenas pela interação com o usuário. Nunca deve conter a lógica responsável por abter as informações que serão mostradas, isso é papael dos serviços
 
     Meta-dados do component
     - selector: nome da tag HTML que iremos criar para o componente
@@ -47,3 +48,14 @@ Módulos (NGMODULE)
 Templates
 - É o html que representa a view dos nossos componentes
 - Além das tags personalizadas, também podemos utilizar as tags padrão do HTML
+
+Services e injeção de dependência
+- o serviço é o responsável por obter as informações necessárias apartir de um servidor remoto
+- criar o serviço ng g s(service) <nome-serviço>
+- utilizamos a classe Http para realizar a comunicação entre a aplicação e o servidor
+
+    Injeção de dependência
+    - fazer com que o component receba uma instancia do serviço totalmente preparada para o uso de forma automática. Acabando com a necessidade de instanciarmos objetos em vários momentos
+    - no angular, para que o serviço possa ser injetado, devemos utilizar o decorator @Injectable()
+    - além do decorator, devemos incluir o serviço na lista de providers do módulo em que o componente que o utilizará faz parte
+    - no angular, essa injeção de dependência só pode ser feita através do construtor
