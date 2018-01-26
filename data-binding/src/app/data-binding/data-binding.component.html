@@ -1,0 +1,19 @@
+<section>
+  <article>
+    <h3>Interpolation</h3>
+    <p>String renderizada com interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+    <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+    <p>Curso de Angular e Gosto do Curso: {{ cursoAngular && getCurtirCurso() }}</p>
+  </article>
+
+  <article>
+    <h3>Property Binding</h3>
+    <img src="{{ urlImagem }}">
+    <img [src]="urlImagem">
+    <!-->
+      O Angular transdormará o <img [src]="urlImagem"> em:<img bind-src="urlImagem">
+      Quando não existe uma propriedade no elemento, usa-se o attr - ex: [attr.colspan]
+    <-->
+  </article>
+</section>

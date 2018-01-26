@@ -66,3 +66,12 @@ Services e injeção de dependência
     - no angular, para que o serviço possa ser injetado, devemos utilizar o decorator @Injectable()
     - além do decorator, devemos incluir o serviço na lista de providers do módulo em que o componente que o utilizará faz parte
     - no angular, essa injeção de dependência só pode ser feita através do construtor
+
+Property binding e Interpolation
+- Databinding é a associação dos dados que estão no componente com o template HTML
+    No Angular, existem 4 formas de fazer o data binding. São elas:
+    - Interpolation {{valor}}
+    - PropertyBinding [propertyName]="valor"
+    - (evento)="handler" - utilizado para executar métodos do componente apartir da interação do usuário com o template
+    - Two Way Databinding [(ngModel)]="proprety" utilizado para manter o template e o componente atualizados
+
