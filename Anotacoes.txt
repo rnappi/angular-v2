@@ -75,3 +75,5 @@ Property binding e Interpolation
     - (evento)="handler" - utilizado para executar métodos do componente apartir da interação do usuário com o template
     - Two Way Databinding [(ngModel)]="proprety" utilizado para manter o template e o componente atualizados
 
+Class e style binding (binding com css)
+- São uma forma de property binding criado para trabalhar com css ao invés de propriedades
